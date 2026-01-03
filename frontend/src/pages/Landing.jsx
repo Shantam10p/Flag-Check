@@ -45,17 +45,17 @@ function Landing() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.6 }}
-        className="w-full z-10"
+        className="w-full max-w-6xl z-10"
       >
-        <p className="text-sm text-gray-500 text-center mb-4">Recent checks</p>
-        <div className="flex gap-3 overflow-x-auto pb-4 px-6 -mx-6 scrollbar-hide">
+        <p className="text-sm text-gray-500 text-center mb-4">Example results</p>
+        <div className="flex gap-4 md:gap-6 overflow-x-auto md:justify-center pb-4 px-6 -mx-6 md:mx-0 scrollbar-hide">
           {exampleResults.map((result, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5 + index * 0.1, duration: 0.4 }}
-              className={`min-w-[280px] bg-gradient-to-br ${result.color} backdrop-blur-sm rounded-2xl p-5 border border-white/10`}
+              className={`min-w-[280px] md:min-w-0 md:flex-1 md:max-w-[280px] bg-gradient-to-br ${result.color} backdrop-blur-sm rounded-2xl p-5 border border-white/10`}
             >
               <div className="text-3xl mb-2">{result.verdict}</div>
               <p className="text-sm text-gray-300">{result.text}</p>
