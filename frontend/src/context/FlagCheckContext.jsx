@@ -4,9 +4,10 @@ const FlagCheckContext = createContext();
 
 export const FlagCheckProvider = ({ children }) => {
   const [currentScreen, setCurrentScreen] = useState('landing');
+  const [selectedType, setSelectedType] = useState(null);
 
   return (
-    <FlagCheckContext.Provider value={{ currentScreen, setCurrentScreen }}>
+    <FlagCheckContext.Provider value={{ currentScreen, setCurrentScreen, selectedType, setSelectedType }}>
       {children}
     </FlagCheckContext.Provider>
   );
