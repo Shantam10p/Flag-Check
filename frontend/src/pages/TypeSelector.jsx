@@ -35,7 +35,7 @@ function TypeSelector() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-3xl mb-24 text-center font-bold"
+        className="text-3xl mb-16 mt-6 text-center font-bold"
       >
         Who are we checking?
       </motion.h2>
